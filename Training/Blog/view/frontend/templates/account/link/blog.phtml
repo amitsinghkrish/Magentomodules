@@ -1,0 +1,38 @@
+<form enctype="multipart/form-data" id="form-validate" method="post" action="<?php echo $this->getUrl('*/*/submitblog') ?>" class="form form-edit-blog" novalidate="novalidate">
+    <fieldset class="fieldset info">
+        <div class="field required">
+            <label for="blog_title" class="label">
+                <span>Title</span>
+            </label>
+            <div class="control">
+                <input type="text" data-validate="{required:true}" class="input-text required-entry" title="Title" name="post_title" id="post_title" aria-required="true">
+            </div>
+        </div>
+        
+        <div class="field required">
+            <label for="blog_description" class="label">
+                <span>Post Description</span>
+            </label>
+            <div class="control">
+                <textarea data-validate="{required:true}" class="input-text required-entry" title="Blog Description" name="post_description" id="post_description" aria-required="true"></textarea>
+            </div>
+        </div>
+        
+        <div class="field required">
+            <label for="post_image" class="label">
+                <span>Post Image</span>
+            </label>
+            <div class="control">
+                <input type="file" name="post_image" data-reset="true" id="post_image">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button title="Save" class="action save primary" type="submit"><span>Save</span></button>
+        </div>
+        <div class="secondary">
+            <a href="<?php echo $this->getUrl('*/*/index') ?>" class="action back"><span>Go back</span></a>
+        </div>
+    </div>
+</form>
